@@ -169,7 +169,8 @@ class SC_SS_ShoppingCart_Fix
        );
        $json = json_encode($json);
 
-       $script = "<!-- SharpSpring Shopping Cart Start -->\n
+       $script = "
+       <!-- SharpSpring Shopping Cart Start -->\n
        <script type='text/javascript'>
            _ss.push(['_setTransaction', {$json}
            }, function() {
@@ -179,6 +180,9 @@ class SC_SS_ShoppingCart_Fix
        </script>
        <!-- SharpSpring Shopping Cart End -->";
 
+       add_action('wp_footer', function($arguments) use ($script) {
+           echo $script;
+       }, 10, 2);
    }
 
    // ------------------------------------------------------------------------
@@ -240,6 +244,9 @@ class SC_SS_ShoppingCart_Fix
        </script>\n
        \n<!-- SharpSpring Shopping Cart End -->\n";
 
+       add_action('wp_footer', function($arguments) use ($script) {
+           echo $script;
+       }, 10, 2);
 
    }// complete_tracking()
 
