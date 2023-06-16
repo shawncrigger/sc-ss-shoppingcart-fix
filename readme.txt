@@ -12,3 +12,5 @@ Enables Shopping Cart Abandonment in Sharpspring CRM, it does require a Sharpspr
 
 == Description ==
 Enables Shopping Cart Abandonment in Sharpspring CRM, it does require a Sharpspring CRM account and to have the tracking code already installed.
+
+## THIS IS NO LONGER POSSIBLE WITH SHARPSPRING AND WORDPRESS. I have contacted Sharpspring developers and there is no way to make it work anymore.
